@@ -1,4 +1,4 @@
-function duplicates(arr) {
+ function duplicates(arr) {
   var temp = arr.sort();
   var box = [];
   for(var i = 1; i < temp.length; i++){

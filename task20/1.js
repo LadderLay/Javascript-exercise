@@ -5,4 +5,4 @@ function useArguments() {
         }
     return sum;
 }
-//arguments:
+//arguments:类数组对象，有length属性，存储的是当前传入函数参数的个数

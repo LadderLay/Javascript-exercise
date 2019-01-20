@@ -19,7 +19,7 @@ function isEven(n) {
 function countBs(str) {
   let cnt = 0;
   for(let i = 0; i < str.length; i++){
-    if(str.chartAt(i) === "B")
+    if(str.charAt(i) === "B")
       cnt++;
   }
   return cnt;
@@ -27,7 +27,7 @@ function countBs(str) {
 function countChar(str, ch) {
   let cnt = 0;
   for(let i = 0; i < str.length; i++){
-    if(str.chartAt(i) === ch)
+    if(str.charAt(i) === ch)
       cnt++;
   }
   return cnt;

@@ -6,5 +6,6 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
+        //path: __dirname,据说可以不生成dist文件
     }
 };

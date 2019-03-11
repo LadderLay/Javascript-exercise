@@ -25,7 +25,8 @@ export default class Index extends Component {
       allchecked: false
     }
   }
-  AddItem (item){
+  AddItem (){
+    let item = this.state.text;
     let todos = this.state.todos.concat([item])
     this.setState({todos})
   }

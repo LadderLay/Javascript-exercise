@@ -26,7 +26,9 @@ export default class Index extends Component {
     }
   }
   AddItem (){
-    let item = this.state.text;
+    let item = {
+      value: this.state.text
+    };
     let todos = this.state.todos.concat([item])
     this.setState({todos})
   }
@@ -41,11 +43,14 @@ export default class Index extends Component {
   ChooseNone () {
     this.setState({allchecked: false})
   }
+  ChangeText (e) {
+
+  }
   render () {
     return (
       <div>
         <p>To Do List</p>
-        <input value = {this.state.text}/>
+        <input value = {this.state.text} onChange={this.ChangeText} />
         <button onClick = {this.AddItem.bind(this)}>增加</button>
         <button onClick = {this.ChooseAll.bind(this)}>全选</button>
         <button onClick = {this.ChooseNone.bind(this)}>取消全选</button>
@@ -54,7 +59,7 @@ export default class Index extends Component {
             this.state.todos.map((item, index) => {
             return <li>
               <input type = "checkbox" checked = {this.state.allchecked}/>
-              <input value = {item}/>
+              <input value = {item.value}/>
               <button onClick = {this.DeleteItem.bind(this)}>删除</button>
             </li>
           })
